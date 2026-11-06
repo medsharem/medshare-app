@@ -90,14 +90,14 @@ export const AdminDashboardScreen: React.FC<Props> = ({
           <View style={styles.adminShieldBadge}>
             <Ionicons name="shield-checkmark" size={18} color={Colors.gold} />
           </View>
-          <View>
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-              <Text style={styles.adminTitle}>MEDSHARE Control Center</Text>
+          <View style={{ flex: 1, minWidth: 0 }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
+              <Text style={styles.adminTitle} numberOfLines={1}>MEDSHARE Control</Text>
               <View style={styles.superAdminPill}>
-                <Text style={styles.superAdminText}>FOUNDER / ADMIN</Text>
+                <Text style={styles.superAdminText}>ADMIN</Text>
               </View>
             </View>
-            <Text style={styles.adminDoctorName}>Dr. Abdelrahman Mostafa (Full System Authority)</Text>
+            <Text style={styles.adminDoctorName} numberOfLines={1}>Dr. Abdelrahman Mostafa</Text>
           </View>
         </View>
 
@@ -106,7 +106,7 @@ export const AdminDashboardScreen: React.FC<Props> = ({
           onPress={onBackToDoctorView}
           activeOpacity={0.8}
         >
-          <Ionicons name="swap-horizontal" size={14} color="#FFFFFF" />
+          <Ionicons name="swap-horizontal" size={13} color="#FFFFFF" />
           <Text style={styles.switchRoleText}>Doctor View</Text>
         </TouchableOpacity>
       </View>
@@ -257,11 +257,13 @@ export const AdminDashboardScreen: React.FC<Props> = ({
             {/* Specialties Distribution in Egypt */}
             <View style={styles.specialtiesCard}>
               <View style={styles.cardTitleRow}>
-                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                  <Ionicons name="pie-chart-outline" size={18} color={Colors.primary} />
-                  <Text style={styles.cardTitle}>Registered Specialties Breakdown</Text>
+                <View style={{ flex: 1 }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                    <Ionicons name="pie-chart-outline" size={16} color={Colors.primary} />
+                    <Text style={styles.cardTitle}>Registered Specialties Breakdown</Text>
+                  </View>
+                  <Text style={styles.subTitleSmall}>Across Cairo, Giza, Alexandria</Text>
                 </View>
-                <Text style={styles.subTitleSmall}>Across Cairo, Giza, Alexandria</Text>
               </View>
 
               <View style={styles.specialtiesListAdmin}>
@@ -781,6 +783,8 @@ const styles = StyleSheet.create({
   },
   storageFooterRow: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 12,

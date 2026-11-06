@@ -127,7 +127,7 @@ export const SpecialistProfileScreen: React.FC<Props> = ({ onBack, onSendCase })
           onPress={onSendCase}
         >
           <Text style={styles.sendCaseBtnText}>Send Case</Text>
-          <Ionicons name="paper-plane" size={18} color="#000000" style={{ marginLeft: 8 }} />
+          <Ionicons name="paper-plane" size={18} color="#0A1728" style={{ marginLeft: 8 }} />
         </TouchableOpacity>
       </View>
     </View>
@@ -308,23 +308,31 @@ const styles = StyleSheet.create({
   },
   footerBar: {
     paddingHorizontal: 16,
-    paddingVertical: 12,
+    paddingTop: 12,
+    paddingBottom: 24,
     borderTopWidth: 1,
     borderTopColor: Colors.border,
-    backgroundColor: Colors.background,
+    backgroundColor: '#FFFFFF',
+    marginBottom: 65, // Clearance for Bottom Navigation Bar on Mobile
   },
   sendCaseBtn: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold, // Champagne Gold for maximum visibility!
     borderRadius: 14,
-    paddingVertical: 14,
+    paddingVertical: 15,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    elevation: 4,
+    shadowColor: Colors.gold,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.35,
+    shadowRadius: 6,
   },
   sendCaseBtnText: {
-    color: '#000000',
+    color: '#0A1728', // Deep Navy text on Champagne Gold
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: '900',
+    letterSpacing: 0.5,
   },
 });
 
