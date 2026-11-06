@@ -85,9 +85,8 @@ export const CaseChatScreen: React.FC<Props> = ({ onBack, caseId }) => {
           <Text style={styles.headerTitle}>Dr. Ahmed Mohamed</Text>
           <Text style={styles.headerSub}>Case #{caseId} • Endodontics</Text>
         </View>
-        <TouchableOpacity style={styles.headerBtn}>
-          <Ionicons name="call-outline" size={20} color={Colors.primary} />
-        </TouchableOpacity>
+        {/* Placeholder to keep title balanced; call & voice note deferred to final phase */}
+        <View style={{ width: 36 }} />
       </View>
 
       {/* Case Context Strip */}
@@ -163,7 +162,7 @@ export const CaseChatScreen: React.FC<Props> = ({ onBack, caseId }) => {
           onPress={handleSend}
           activeOpacity={0.8}
         >
-          <Ionicons name="send" size={18} color="#000000" />
+          <Ionicons name="send" size={18} color="#0A1728" />
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
@@ -304,7 +303,7 @@ const styles = StyleSheet.create({
     width: 38,
     height: 38,
     borderRadius: 19,
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     justifyContent: 'center',
     alignItems: 'center',
   },

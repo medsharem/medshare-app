@@ -69,7 +69,7 @@ export const HomeScreen: React.FC<Props> = ({ onNavigate, cases }) => {
               onPress={() => onNavigate('admin_dashboard')}
               activeOpacity={0.8}
             >
-              <ShieldCheckIcon size={14} color={Colors.gold} />
+              <ShieldCheckIcon size={14} color="#FFFFFF" />
               <Text style={styles.adminBadgeBtnText}>Admin</Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -555,17 +555,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
-    backgroundColor: 'rgba(200, 164, 93, 0.2)',
+    backgroundColor: 'rgba(255, 255, 255, 0.12)',
     paddingHorizontal: 8,
     paddingVertical: 6,
     borderRadius: 8,
-    borderWidth: 1,
-    borderColor: Colors.gold,
+    borderWidth: 1.5,
+    borderColor: '#FFFFFF',
   },
   adminBadgeBtnText: {
     fontSize: 10,
     fontWeight: '800',
-    color: Colors.gold,
+    color: '#FFFFFF',
   },
   rightIconsGroup: {
     flexDirection: 'row',

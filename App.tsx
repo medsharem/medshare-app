@@ -192,11 +192,19 @@ export default function App() {
             <TouchableOpacity
               style={[
                 styles.roleToggleBtn,
-                currentScreen === 'admin_dashboard' && styles.roleToggleBtnActiveAdmin,
+                styles.adminPanelBtn,
+                currentScreen === 'admin_dashboard' && styles.adminPanelBtnActive,
               ]}
               onPress={() => setCurrentScreen('admin_dashboard')}
             >
-              <Text style={styles.roleToggleTextAdmin}>🛡️ Admin Panel</Text>
+              <Text
+                style={[
+                  styles.adminPanelBtnText,
+                  currentScreen === 'admin_dashboard' && styles.adminPanelBtnTextActive,
+                ]}
+              >
+                🛡️ Admin Panel
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -286,16 +294,28 @@ const styles = StyleSheet.create({
   },
   roleToggleBtnActiveAdmin: {
     backgroundColor: Colors.gold,
-    borderColor: Colors.gold,
+    borderColor: '#FFFFFF',
   },
   roleToggleText: {
     fontSize: 10,
     fontWeight: '700',
     color: '#FFFFFF',
   },
-  roleToggleTextAdmin: {
+  adminPanelBtn: {
+    borderWidth: 1.5,
+    borderColor: '#FFFFFF',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  },
+  adminPanelBtnActive: {
+    backgroundColor: '#FFFFFF',
+    borderColor: '#FFFFFF',
+  },
+  adminPanelBtnText: {
     fontSize: 10,
     fontWeight: '800',
+    color: '#FFFFFF',
+  },
+  adminPanelBtnTextActive: {
     color: Colors.primary,
   },
   switcherScroll: {
