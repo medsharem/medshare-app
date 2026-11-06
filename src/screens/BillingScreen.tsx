@@ -163,7 +163,7 @@ export const BillingScreen: React.FC<Props> = ({ onBack, onViewCaseDetails }) =>
                   style={styles.primaryActionBtn}
                   onPress={() => setActiveTab('withdraw')}
                 >
-                  <Ionicons name="arrow-up-circle" size={18} color="#000000" />
+                  <Ionicons name="arrow-up-circle" size={18} color="#0A1728" />
                   <Text style={styles.primaryActionBtnText}>سحب الأرباح</Text>
                 </TouchableOpacity>
 
@@ -218,7 +218,7 @@ export const BillingScreen: React.FC<Props> = ({ onBack, onViewCaseDetails }) =>
                 style={styles.confirmPaymentBtn}
                 onPress={() => showModal('تم تأكيد التحصيل بنجاح ✅', 'تم تسجيل استلام أتعاب الحالة في العيادة بنجاح، وترحيل نسبة الطبيب المحيل وعمولة المنصة للمحفظة فوراً.', '2,400 ج.م')}
               >
-                <Ionicons name="checkmark-done" size={18} color="#000000" />
+                <Ionicons name="checkmark-done" size={18} color="#0A1728" />
                 <Text style={styles.confirmPaymentBtnText}>تأكيد تحصيل الرسوم من المريض</Text>
               </TouchableOpacity>
             </View>
@@ -318,7 +318,7 @@ export const BillingScreen: React.FC<Props> = ({ onBack, onViewCaseDetails }) =>
               )}
             >
               <Text style={styles.requestWithdrawBtnText}>تحويل الأرباح إلى InstaPay الآن</Text>
-              <Ionicons name="send" size={18} color="#000000" style={{ marginLeft: 6 }} />
+              <Ionicons name="send" size={18} color="#0A1728" style={{ marginLeft: 6 }} />
             </TouchableOpacity>
           </View>
         )}
@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
   },
   primaryActionBtn: {
     flex: 1,
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     borderRadius: 12,
     paddingVertical: 12,
     flexDirection: 'row',
@@ -510,8 +510,8 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   primaryActionBtnText: {
-    color: '#000000',
-    fontWeight: 'bold',
+    color: '#0A1728',
+    fontWeight: '800',
     fontSize: 14,
   },
   secondaryActionBtn: {
@@ -600,7 +600,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   confirmPaymentBtn: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     borderRadius: 12,
     paddingVertical: 12,
     flexDirection: 'row',
@@ -609,8 +609,8 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   confirmPaymentBtnText: {
-    color: '#000000',
-    fontWeight: 'bold',
+    color: '#0A1728',
+    fontWeight: '800',
     fontSize: 14,
   },
   txCard: {
@@ -730,7 +730,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   requestWithdrawBtn: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     borderRadius: 14,
     paddingVertical: 14,
     flexDirection: 'row',
@@ -739,9 +739,9 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
   requestWithdrawBtnText: {
-    color: '#000000',
+    color: '#0A1728',
     fontSize: 15,
-    fontWeight: 'bold',
+    fontWeight: '800',
   },
 
   /* Modal Styles */
@@ -833,15 +833,15 @@ const styles = StyleSheet.create({
     marginBottom: 18,
   },
   modalConfirmBtn: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     borderRadius: 12,
     paddingVertical: 13,
     width: '100%',
     alignItems: 'center',
   },
   modalConfirmBtnText: {
-    color: '#000000',
-    fontWeight: 'bold',
+    color: '#0A1728',
+    fontWeight: '800',
     fontSize: 15,
   },
 });

@@ -191,7 +191,7 @@ export const CaseTrackingScreen: React.FC<Props> = ({
           onPress={onViewCase}
         >
           <Text style={styles.viewCaseButtonText}>View Case</Text>
-          <Ionicons name="document-text-outline" size={18} color="#000000" style={{ marginLeft: 6 }} />
+          <Ionicons name="document-text-outline" size={18} color="#0A1728" style={{ marginLeft: 6 }} />
         </TouchableOpacity>
       </View>
     </View>
@@ -397,14 +397,14 @@ const styles = StyleSheet.create({
     flex: 1.4,
     paddingVertical: 13,
     borderRadius: 12,
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
   viewCaseButtonText: {
-    color: '#000000',
-    fontWeight: 'bold',
+    color: '#0A1728',
+    fontWeight: '800',
     fontSize: 15,
   },
 });

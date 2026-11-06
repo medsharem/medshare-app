@@ -139,7 +139,7 @@ export const CaseReturnedScreen: React.FC<Props> = ({
           onPress={onMarkCompleted}
         >
           <Text style={styles.completeBtnText}>Mark as Completed</Text>
-          <Ionicons name="checkmark-circle" size={20} color="#000000" style={{ marginLeft: 8 }} />
+          <Ionicons name="checkmark-circle" size={20} color="#0A1728" style={{ marginLeft: 8 }} />
         </TouchableOpacity>
       </View>
     </View>
@@ -324,7 +324,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.background,
   },
   completeBtn: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     borderRadius: 14,
     paddingVertical: 14,
     flexDirection: 'row',
@@ -332,9 +332,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   completeBtnText: {
-    color: '#000000',
+    color: '#0A1728',
     fontSize: 15,
-    fontWeight: 'bold',
+    fontWeight: '800',
   },
 });
 

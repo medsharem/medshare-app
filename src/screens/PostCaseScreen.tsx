@@ -857,15 +857,15 @@ const styles = StyleSheet.create({
   },
   nextBtn: {
     flex: 2,
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
   },
   nextBtnText: {
-    fontSize: 13,
-    fontWeight: '700',
-    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#0A1728',
   },
 });

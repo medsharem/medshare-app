@@ -120,7 +120,7 @@ export const TreatmentReportScreen: React.FC<Props> = ({ onBack, onSendBack }) =
           onPress={onSendBack}
         >
           <Text style={styles.sendBackBtnText}>Send Back to Referring Dentist</Text>
-          <Ionicons name="return-up-back" size={20} color="#000000" style={{ marginLeft: 8 }} />
+          <Ionicons name="return-up-back" size={20} color="#0A1728" style={{ marginLeft: 8 }} />
         </TouchableOpacity>
       </View>
     </View>
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.background,
   },
   sendBackBtn: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     borderRadius: 14,
     paddingVertical: 14,
     flexDirection: 'row',
@@ -295,9 +295,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   sendBackBtnText: {
-    color: '#000000',
+    color: '#0A1728',
     fontSize: 15,
-    fontWeight: 'bold',
+    fontWeight: '800',
   },
 });
 

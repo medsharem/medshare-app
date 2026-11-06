@@ -256,7 +256,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   myMessageText: {
-    color: '#000000',
+    color: '#FFFFFF',
     fontWeight: '500',
   },
   otherMessageText: {
@@ -267,7 +267,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   myTimeText: {
-    color: '#444444',
+    color: 'rgba(255, 255, 255, 0.75)',
     textAlign: 'left',
   },
   otherTimeText: {

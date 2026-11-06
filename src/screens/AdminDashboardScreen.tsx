@@ -214,17 +214,19 @@ export const AdminDashboardScreen: React.FC<Props> = ({
             {/* Visual Cloud Storage & Radiographs Indicator */}
             <View style={styles.storageCard}>
               <View style={styles.storageCardHeader}>
-                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, flex: 1 }}>
                   <View style={styles.storageIconCircle}>
                     <Ionicons name="cloud-done" size={20} color={Colors.gold} />
                   </View>
-                  <View>
-                    <Text style={styles.storageTitle}>سيرفر الأشعة والمستندات (Cloud Storage)</Text>
+                  <View style={{ flex: 1 }}>
+                    <View style={styles.storageTitlePillRow}>
+                      <Text style={styles.storageTitle}>سيرفر الأشعة والمستندات</Text>
+                      <View style={styles.storageFreeTierPill}>
+                        <Text style={styles.storageFreeTierText}>باقة مجانية 5GB</Text>
+                      </View>
+                    </View>
                     <Text style={styles.storageSub}>سيرفرات Google Firebase السحابية المشفرة</Text>
                   </View>
-                </View>
-                <View style={styles.storageFreeTierPill}>
-                  <Text style={styles.storageFreeTierText}>الباقة المجانية (Free Tier)</Text>
                 </View>
               </View>
 
@@ -730,6 +732,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  storageTitlePillRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    gap: 6,
+    marginBottom: 2,
+  },
   storageTitle: {
     fontSize: 13,
     fontWeight: '800',
@@ -757,6 +767,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 6,
     marginBottom: 8,
   },
   storageUsedText: {
@@ -782,11 +794,9 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   storageFooterRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexDirection: 'column',
+    alignItems: 'stretch',
     gap: 8,
-    justifyContent: 'space-between',
-    alignItems: 'center',
     marginTop: 12,
     paddingTop: 10,
     borderTopWidth: 1,
@@ -796,23 +806,28 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    flex: 1,
+    width: '100%',
   },
   storageHealthText: {
-    fontSize: 10,
-    color: '#64748B',
+    fontSize: 11,
+    color: '#475569',
+    flex: 1,
+    lineHeight: 16,
   },
   alertPill: {
+    alignSelf: 'flex-start',
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
     backgroundColor: '#FEF3C7',
     paddingHorizontal: 8,
-    paddingVertical: 3,
+    paddingVertical: 4,
     borderRadius: 6,
+    borderWidth: 1,
+    borderColor: '#FDE68A',
   },
   alertPillText: {
-    fontSize: 9,
+    fontSize: 10,
     fontWeight: '700',
     color: '#B45309',
   },

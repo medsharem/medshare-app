@@ -212,7 +212,7 @@ export const CaseDetailsScreen: React.FC<Props> = ({ onBack, onChat, onEditCase 
 
         <TouchableOpacity style={styles.editButton} onPress={onEditCase}>
           <Text style={styles.editButtonText}>Edit Case</Text>
-          <Ionicons name="create-outline" size={18} color="#000000" style={{ marginLeft: 6 }} />
+          <Ionicons name="create-outline" size={18} color="#0A1728" style={{ marginLeft: 6 }} />
         </TouchableOpacity>
       </View>
     </View>
@@ -409,14 +409,14 @@ const styles = StyleSheet.create({
     flex: 1.4,
     paddingVertical: 13,
     borderRadius: 12,
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.gold,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
   editButtonText: {
-    color: '#000000',
-    fontWeight: 'bold',
+    color: '#0A1728',
+    fontWeight: '800',
     fontSize: 15,
   },
 });
