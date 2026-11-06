@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npx expo export --platform web",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist_v2",
   "cleanUrls": true,
   "rewrites": [
     {
