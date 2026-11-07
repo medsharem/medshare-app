@@ -60,7 +60,23 @@ if (Platform.OS === 'web' && typeof document !== 'undefined') {
 }
 
 export default function App() {
-  const [currentScreen, setCurrentScreen] = useState<string>('home');
+  const getInitialScreen = () => {
+    if (typeof window !== 'undefined' && window.location) {
+      const params = new URLSearchParams(window.location.search);
+      const s = params.get('screen');
+      if (s) return s;
+    }
+    return 'home';
+  };
+  const [currentScreen, setCurrentScreenState] = useState<string>(getInitialScreen);
+  const setCurrentScreen = (screen: string) => {
+    setCurrentScreenState(screen);
+    if (typeof window !== 'undefined' && window.history) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('screen', screen);
+      window.history.replaceState({}, '', url.toString());
+    }
+  };
   const [casesList, setCasesList] = useState<MedicalCase[]>([sampleCaseDM10254]);
 
   const screens = [
